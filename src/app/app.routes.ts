@@ -5,11 +5,13 @@ import {UsuarioComponent} from './components/usuario/usuario.component';
 import {USUARIO_ROUTES} from './components/usuario/usuario.routes';
 
 const APP_ROUTES: Routes = [
-    { path: 'home', component: HomeComponent},
+    { path: 'home', component: HomeComponent, data: {animation: 'HomePage'}},
+
     { 
         path: 'usuario/:id', 
         component: UsuarioComponent,
-        children: USUARIO_ROUTES
+        children: USUARIO_ROUTES, 
+        data: {animation: 'UserPage'}
     },
     { path: '**', pathMatch: 'full', redirectTo: 'home'}
 ];

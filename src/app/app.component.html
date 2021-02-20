@@ -5,8 +5,9 @@
   <h1>Demos<small> angular</small></h1>
   <hr>
   
-  <router-outlet></router-outlet>
-
+  <div [@routeAnimations]="prepareRoute(outlet)">
+    <router-outlet #outlet="outlet"></router-outlet>
+  </div>
 
  
   
